@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contestant list</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap');
+
+        /* navigation bar */
+
+        body {
+            margin: 0%;
+            padding: 0%;
+            font-family: sans-serif;
+            background: url(newbb.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: whitesmoke;
+        }
+
+        nav {
+            background-color: rgb(51, 192, 227);
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        ul {
+            list-style: none;
+            display: flex;
+        }
+
+        li {
+            margin: 0 10px;
+        }
+
+        .na {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        .na:hover {
+            color: #f5c518;
+        }
+
+        nav .log {
+            position: absolute;
+            right: 25px;
+        }
+
+        /* main */
+
+
+        h1 {
+            text-align: center;
+        }
+
+        table {
+            margin-top: 8%;
+            margin-left: 15%;
+            font-size: 25px;
+            width: 70%;
+            color:yellow;
+        }
+
+        th {
+            padding: 15px;
+            border: 1px solid rgb(28, 25, 167);
+        }
+
+        td {
+            padding: 15px;
+            border: 3px solid white;
+        }
+
+        th {
+            background-color: rgb(45, 78, 211);
+        }
+
+        .rm {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bolder;
+        }
+
+        .rm:hover {
+
+            color: rgb(35, 226, 232);
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a class="na" href="/after-login/After-login.html">Home</a></li>
+            <li><a class="na" href="/after-login/nav/about.html">About</a></li>
+            <li><a class="na" href="/after-a-login/result/Result.html">Result</a></li>
+            <li><a class="na" href="/after-login/nav/feedback.html">Feedback</a></li>
+            <li><a class="na" href="/index.html" class="log">logout!</a></li>
+        </ul>
+    </nav>
+
+    <table>
+        <tr>
+            <th>Contestant No.</th>
+            <th>Contestant Name </th>
+            <th>Remove </th>
+        </tr>
+        <tr>
+            <td>01</td>
+            <td>Manisha Rani</td>
+            <td><a class="rm">Remove</a></td>
+        </tr>
+        <tr>
+            <td>02</td>
+            <td>Abhishek Malhan</td>
+            <td><a class="rm">Remove</a></td>
+        </tr>
+        <tr>
+            <td>03</td>
+            <td>Pooja Bhatt</td>
+            <td><a class="rm">Remove</a></td>
+        </tr>
+        <tr>
+            <td>04</td>
+            <td>Bebika</td>
+            <td><a class="rm">Remove</a></td>
+        </tr>
+        <tr>
+            <td>05</td>
+            <td>Elvish Yadav</td>
+            <td><a class="rm">Remove</a></td>
+        </tr>
+    </table>
+
+    <script>
+        var removeLinks = document.getElementsByClassName("rm");
+
+        for (var i = 0; i < removeLinks.length; i++) {
+            removeLinks[i].addEventListener("click", function () {
+                var row = this.parentNode.parentNode;
+                row.parentNode.removeChild(row);
+            });
+        }
+    </script>
+</body>
+

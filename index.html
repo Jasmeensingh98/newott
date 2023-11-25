@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image" href="eye.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+</head>
+
+<body>
+    <h1>Bigg Boss <img src="https://tenor.com/view/fire-dumpster-trash-gif-20642712.gif" alt="Computer man" style="width:1000px;height:100px;"></h1>
+    
+    <ul>
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="https://www.jiocinema.com/tv-shows/bigg-boss-ott/3499624">watch</a></li>
+        <li><a href="tel:9991719097">Contact</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    <form role="form" onsubmit="signIn(event);" autocomplete="off">
+        <div class="det">
+            <div class="png">
+                <img src="eye.jpg" height="30%">
+                
+            </div>
+            <div class="detail">
+                <p> <strong>Bigg Boss</strong> is a popular reality television show that originated in the Netherlands
+                    and has been adapted in various countries, including India. The Indian version of Bigg Boss follows
+                    the
+                    format of a competitive reality show where a group of celebrity contestants live together in a
+                    specially
+                    constructed
+                    house for a fixed duration of time, usually around three months.
+                </p>
+                <marquee scrollamount="20">
+                    <img src="sliding picture22.jpeg">
+                    <img src="salman.jpeg">
+                </marquee>
+            </div>
+        </div>
+
+        <fieldset class="field">
+            <legend>
+                <h3>Sign In</h3>
+            </legend>
+
+            <div class="headingsContainer">
+                <p>Sign in with your E-mail & Password</p>
+            </div>
+
+            <div class="mainContainer">
+
+                <!-- Username -->
+                <label for="email">Username</label>
+                <input type="email" id="email" placeholder="Enter your E-mail " name="email">
+
+                <!-- Password -->
+                <label for="pswrd">Password</label>
+                <input type="password" id="pwd" placeholder="Enter your Password" name="pwd">
+                
+
+                <div class="subcontainer">
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember"> Remember me
+                    </label>
+                    <p class="forgotpsd"> <a href="forg.html">Forgot Password?</a></p>
+                </div>
+
+                <!-- Submit button -->
+                <button type="submit">Login</button>
+                <button type="reset">Reset</button>
+
+                <!-- Sign up link -->
+                <p class="register">Not a member? <a href="register.html">Register here!</a></p>
+                <p class="register">Admin Login <a href="admin.html">click here!</a></p>
+
+                <p class="liw">login in with</p>
+                <a href="https://www.facebook.com/groups/1800603763537236/" class="fa fa-facebook"></a>
+                <a href="https://twitter.com/JioCinema/status/1668542304993280000" class="fa fa-twitter"></a>
+                <a href="https://play.google.com/store/apps/details?id=com.jio.media.ondemand&pli=1" class="fa fa-google"></a>
+                <a href="https://www.youtube.com/watch?v=1buJ4GVR63w" class="fa fa-youtube"></a>
+                <a href="https://www.instagram.com/p/CvRvRalOFJm/" class="fa fa-instagram"></a>
+
+            </div>
+        </fieldset>
+    </form>
+
+    
+
+    <script>
+        function signIn(e) {
+            e.preventDefault();
+            let email = document.getElementById('email').value, pwd = document.getElementById('pwd').value;
+            let formData = JSON.parse(localStorage.getItem('formData')) || [];
+            localStorage.setItem("email",JSON.stringify(email));
+            console.log(email);
+            let exist = formData.length && JSON.parse(localStorage.getItem('formData')).some(data => data.email.toLowerCase() == email && data.pwd.toLowerCase() == pwd);
+            if (!exist) {
+                alert("Please Enter Registered E-mail Id.");
+            }
+            else {
+                location.href = "vote.html";
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>

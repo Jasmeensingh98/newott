@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap');
+
+/* Login page */
+
+body {
+  margin: 0%;
+  padding: 0%;
+  font-family: sans-serif;
+  background: url(newbb.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: whitesmoke;
+}
+
+
+h1 {
+  margin:0%;
+  display: flex;
+  justify-content: center;
+  background-color: orange;
+  color: white;
+  font-size: 50px;
+  padding: 10px;
+  font-family: 'Bruno Ace', cursive;
+}
+
+h3 {
+  font-size: 30px;
+  color: white;
+  margin-left: 15px;
+  border-radius: 20px;
+}
+
+.field {
+  position: absolute;
+  right: 50px;
+  height: 83%;
+  width: 35rem;
+  margin-top: 1%;
+  border-radius: 20px;
+  color: whitesmoke;
+  border: 5px solid whitesmoke;
+  padding: 20px;
+  backdrop-filter: blur(1px);
+}
+
+label {
+  color: white;
+  font-size: 15px;font-size: 15px;
+}
+
+input[type=text],
+input[type=password] {
+  width: 100%;
+  margin: 10px 0;
+  border-radius: 5px;
+  padding: 15px 18px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: rgb(77, 215, 231);
+  color: white;
+  padding: 14px 20px;
+  border-radius: 5px;
+  margin: 5px 25px;
+  width: 40%;
+  font-size: 18px;
+}
+
+button:hover {
+  background-color: rgb(220, 217, 39);
+  cursor: pointer;
+}
+
+.headingsContainer {
+  text-align: center;
+}
+
+.headingsContainer p {
+  color: white;
+}
+
+.mainContainer {
+  padding: 16px;
+}
+
+.subcontainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.subcontainer a {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.register {
+  color: rgb(217, 142, 12);
+  text-align: center;
+}
+
+.register a {
+  color: orange;
+}
+.register a:hover {
+  color: blue;
+  font-size: 20px;
+}
+
+.register a:link {
+  text-decoration: none;
+}
+
+
+h2 {
+  position: absolute;
+  left: 20%;
+  top: 20%;
+  color: white;
+}
+
+.png img
+{
+  position: absolute;
+  top: 30%;
+  left: 18%;
+  height: 15rem;
+}
+
+.detail {
+  position: absolute;
+  top: 60%;
+  left: 50px;
+  text-align: center;
+  width: 45rem;
+  font-size: 20px;
+  color: whitesmoke;
+  border-radius: 20px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: orange;
+  margin-top: 43rem;
+}
+
+footer p{
+  font-size: 20px;
+}

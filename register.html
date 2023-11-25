@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" type="image" href="ox.png">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup page</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+
+<body>
+    <h1>Bigg Boss Voting </h1>
+    <form role="form" onsubmit="signUp(event, true);" autocomplete="off">
+        <fieldset class="field">
+            <legend>
+                <h3>Register Now</h3>
+            </legend>
+            <div class="headingsContainer">
+
+                <p>Sign up with your username and password</p>
+            </div>
+
+            <!-- Main container for all inputs -->
+            <div class="mainContainer">
+
+                <!-- Name -->
+                <label for="fname" class="fname">First Name</label>
+                <input type="text" placeholder="First Name" id="fname" name="name">
+
+                <!-- Name -->
+                <label for="lname" class="lname">Last name</label>
+                <input type="text" placeholder="Last Name" id="lname" name="lname">
+
+                <!-- Username -->
+                <label for="email">Your E-mail</label>
+                <input type="text" placeholder="Enter E-mail" id="email" name="email">
+
+                <!-- Password -->
+                <label for="pswrd">Your password</label>
+                <input type="password" placeholder="Enter Password" id="pwd" name="pswrd">
+
+                <!-- Submit button -->
+                <button type="submit">Register</button>
+                <button type="reset">Reset</button>
+
+                <!-- Sign up link -->
+                <p class="register">Already a member? <a href="index.html">Login Now!</a></p>
+
+            </div>
+
+        </fieldset>
+    </form>
+
+    <div class="png">
+        <img src="eye.jpg" height="30%">
+    </div>
+    <div class="detail">
+        <p> <strong>Bigg Boss</strong> is a popular reality television show that originated in the Netherlands
+            and has been adapted in various countries, including India. The Indian version of Bigg Boss follows the
+            format of a competitive reality show where a group of celebrity contestants live together in a specially
+            constructed
+            house for a fixed duration of time, usually around three months.
+        </p>
+    </div>
+
+    <footer>
+        <div class="footer">
+            <p>copyright &copy; <a href="#">Bigg Boss Voting </a></p>
+        </div>
+    </footer>
+
+    <script>
+        const signUp = e => {
+            let fname = document.getElementById('fname').value,
+                lname = document.getElementById('lname').value,
+                email = document.getElementById('email').value,
+                pwd = document.getElementById('pwd').value;
+
+            let formData = JSON.parse(localStorage.getItem('formData')) || [];
+
+            let exist = formData.length &&
+                JSON.parse(localStorage.getItem('formData')).some(data =>
+                    data.fname.toLowerCase() == fname.toLowerCase() &&
+                    data.lname.toLowerCase() == lname.toLowerCase()
+                );
+
+            if (!exist) {
+                formData.push({ fname, lname, email, pwd, voted: false,votedTo:"none"});
+                localStorage.setItem('formData', JSON.stringify(formData));
+                document.querySelector('form').reset();
+                document.getElementById('fname').focus();
+                alert("Account Created.");
+                location.href = "index.html";
+            }
+            else {
+                alert("You have already signed up");
+            }
+            e.preventDefault();
+        }
+    </script>
+
+</body>
+
+</html>
