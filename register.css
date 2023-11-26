@@ -139,6 +139,7 @@ h2 {
   font-size: 20px;
   color: whitesmoke;
   border-radius: 20px;
+  padding:15px;
 }
 
 footer {
@@ -150,4 +151,37 @@ footer {
 
 footer p{
   font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 30px;
+  }
+
+  .field {
+    position: static;
+    width: 90%;
+    margin: 5% auto;
+    border: none;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+  }
+
+  .png img {
+    position: static;
+    top: auto;
+    left: auto;
+    height: auto;
+    width: 50%;
+    margin: 20px auto;
+  }
+
+  .detail {
+    position: static;
+    top: auto;
+    left: auto;
+    width: 90%;
+    margin: 20px auto;
+  }
 }
