@@ -292,7 +292,7 @@ footer a {
 }
 
 /* Media Queries */
-@media (max-width: 1200px) {
+@media (max-width: 768px) {
   h1 {
     font-size: 30px;
   }
